@@ -105,32 +105,8 @@ src/
 6. **Sort** - Click "Sort by Name" to toggle order
 7. **Navigate** - Use pagination controls for multiple pages
 
-## 🔒 Security Notes
 
-⚠️ **For Demo Purposes Only**
-- Passwords stored in plain text in localStorage
-- No encryption
-- Client-side validation only
 
-**For Production:**
-- Never store passwords client-side
-- Implement proper backend authentication
-- Use JWT tokens
-- Add HTTPS, CSRF protection, rate limiting
-
-## 🌐 Deployment
-
-### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### Docker
-```bash
-docker build -t corelia-contacts .
-docker run -p 80:80 corelia-contacts
-```
 
 ### Build Settings
 - Framework: Vite
@@ -148,33 +124,9 @@ docker run -p 80:80 corelia-contacts
 - **Name**: 1-100 characters, required
 - **Phone**: 7-15 digits, optional + prefix
 
-## 🎨 UI/UX
 
-- **Design**: Modern, clean interface with Teal/Violet theme
-- **Responsive**: Mobile-first approach, works on all devices
-- **Accessible**: ARIA labels, keyboard navigation
-- **Loading States**: Visual feedback on actions
-- **Error Handling**: Clear, user-friendly error messages
 
-## 📊 State Management
 
-### Redux Store Structure
-```typescript
-{
-  auth: {
-    users: User[]              // All registered users
-    currentUserId: string | null // Currently logged-in user
-    remember: boolean          // Remember me preference
-  },
-  contacts: {
-    byUserId: {
-      [userId]: Contact[]      // Contacts grouped by user
-    }
-  }
-}
-```
-
-## 🔧 Development
 
 ### Available Scripts
 ```bash
@@ -184,74 +136,5 @@ npm run preview   # Preview production build
 npm run lint      # Run ESLint
 ```
 
-### Browser Support
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers
 
-## 📝 Code Quality
 
-- **TypeScript**: Strict mode, full type coverage
-- **ESLint**: Zero linting errors
-- **Clean Code**: DRY principles, clear naming
-- **Maintainable**: Well-organized, documented
-
-## 🚀 Performance
-
-- **Bundle Size**: ~315KB JS (98KB gzipped)
-- **Fast Build**: Vite with HMR
-- **Optimized**: Memoization, code splitting ready
-
-## 📚 Documentation
-
-All code is documented with inline comments explaining:
-- Component purpose and usage
-- Function parameters and return values
-- Complex logic and business rules
-
-## 🐛 Troubleshooting
-
-### Port Already in Use
-```bash
-npx kill-port 5173
-npm run dev
-```
-
-### Dependencies Not Installing
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### Lost Data
-- Data is stored in localStorage
-- Check browser settings (ensure cookies/storage enabled)
-- Incognito mode clears data on close
-
-## 🎓 Learning Points
-
-This project demonstrates:
-- Modern React patterns (hooks, functional components)
-- Redux Toolkit best practices
-- TypeScript for type safety
-- Form validation with Zod
-- Responsive design with TailwindCSS
-- Client-side routing with React Router
-- LocalStorage for persistence
-
-## 📄 License
-
-This project is created as a technical assessment for Corelia (A RICOH Company).
-
-## 👨‍💻 Development Notes
-
-- **No Backend**: All data persisted in localStorage
-- **Production Ready**: Error handling, validation, accessibility
-- **Scalable**: Easy to add new features
-- **Maintainable**: Clear structure, consistent patterns
-- **Performant**: Optimized renders, efficient state updates
-
----
-
-**Built with ❤️ for Corelia Task**
