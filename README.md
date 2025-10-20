@@ -92,8 +92,7 @@ src/
 
 ### Data Persistence
 - Auto-save to localStorage
-- Survives page refresh
-- Namespace isolation (`corelia_auth`, `corelia_contacts`)
+
 
 ## 📱 Usage
 
