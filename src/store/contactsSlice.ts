@@ -4,10 +4,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { Contact, ContactsState } from '../types'
+import { getFromStorage } from '../utils/storage'
 
-const initialState: ContactsState = {
+const defaultState: ContactsState = {
   byUserId: {}
 }
+
+const initialState: ContactsState = getFromStorage('contacts', defaultState)
 
 const contactsSlice = createSlice({
   name: 'contacts',
